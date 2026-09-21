@@ -219,7 +219,8 @@ onMounted(() => {
             <Button type="plain" icon="mdi:swap-horizontal" tooltip="Switch project" />
           </ActionList>
           <Button type="plain" icon="mdi:theme-light-dark" tooltip="Light / dark" @click="toggleDark" />
-          <Button type="plain" icon="mdi:help-circle-outline" tooltip="Help (external)" url="https://docs.cocktailcms.com/" external />
+          <Button type="plain" icon="mdi:help-circle-outline" tooltip="Help" url="https://github.com/tarwin/cocktailcms-octans" external />
+          <Button type="plain" icon="mdi:github" tooltip="Github" url="https://github.com/tarwin/cocktailcms-octans" external />
           </div>
         </template>
       </GlobalNav>
