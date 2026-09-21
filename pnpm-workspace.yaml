@@ -1,0 +1,4 @@
+allowBuilds:
+  vue-demi: false
+onlyBuiltDependencies:
+  - vue-demi

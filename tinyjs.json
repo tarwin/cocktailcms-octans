@@ -1,0 +1,16 @@
+{
+  "name": "Cocktail CMS",
+  "id": "com.cocktailcms.app",
+  "backend": "tinyjs/backend/main.ts",
+  "frontend": {
+    "dev": "pnpm dev",
+    "devUrl": "http://127.0.0.1:8888",
+    "build": "pnpm build",
+    "dist": "dist"
+  },
+  "window": {
+    "width": 1280,
+    "height": 800,
+    "title": "Cocktail CMS"
+  }
+}

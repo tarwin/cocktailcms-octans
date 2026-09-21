@@ -1,0 +1,2477 @@
+{
+    "blueprints": [
+        {
+            "id": 3,
+            "key": "people",
+            "label": "👸 People",
+            "fields": [
+                {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "order": 1,
+                    "params": {
+                        "type": "single",
+                        "required": false,
+                        "min": 2,
+                        "max": "30",
+                        "regex": ""
+                    },
+                    "id": 1
+                },
+                {
+                    "key": "nickname",
+                    "label": "Nickname",
+                    "type": "text",
+                    "order": 2,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {},
+                    "id": 7
+                },
+                {
+                    "key": "house",
+                    "label": "House",
+                    "type": "link",
+                    "order": 3,
+                    "params": {
+                        "linkId": 4,
+                        "linkFieldDisplay": "name",
+                        "linkFieldDisplayDesc": "color",
+                        "linkFieldDisplayDescType": "color",
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": true,
+                        "allowMultiple": false,
+                        "showTags": false
+                    },
+                    "id": 3
+                },
+                {
+                    "key": "born",
+                    "label": "Year Born (AC)",
+                    "type": "number",
+                    "order": 4,
+                    "params": {
+                        "required": false,
+                        "type": "int",
+                        "displayAs": "text",
+                        "min": "",
+                        "step": "1",
+                        "iconOn": "fas fa-star",
+                        "iconOff": "far fa-star",
+                        "iconOnColor": "#FDD700",
+                        "iconOnColorHover": "#FDD700",
+                        "iconOffColor": "#D2D2D2",
+                        "iconOffColorHover": "#D2D2D2"
+                    },
+                    "id": 6
+                },
+                {
+                    "key": "year-died",
+                    "label": "Year Died (AC)",
+                    "type": "number",
+                    "order": 5,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "required": false,
+                        "type": "int",
+                        "displayAs": "text",
+                        "iconOn": "fas fa-star",
+                        "iconOff": "far fa-star",
+                        "iconOnColor": "#FDD700",
+                        "iconOnColorHover": "#FDD700",
+                        "iconOffColor": "#D2D2D2",
+                        "iconOffColorHover": "#D2D2D2"
+                    },
+                    "id": 8
+                },
+                {
+                    "key": "relationships",
+                    "label": "Relationships",
+                    "type": "sub",
+                    "order": 6,
+                    "params": {
+                        "required": false,
+                        "linkId": 5,
+                        "linkFieldId": "person",
+                        "linkFieldDisplay": [
+                            "type",
+                            "to-person"
+                        ]
+                    },
+                    "id": 5
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 67,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc",
+            "filteringAllowed": true
+        },
+        {
+            "id": 4,
+            "key": "house",
+            "label": "🏰 House",
+            "fields": [
+                {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "order": 1,
+                    "params": {},
+                    "id": 1
+                },
+                {
+                    "key": "color",
+                    "label": "Color",
+                    "type": "color",
+                    "order": 2,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "required": false,
+                        "onlyGray": false,
+                        "allowAlpha": false,
+                        "format": "hex",
+                        "displayAs": "circle",
+                        "picker": "picker"
+                    },
+                    "id": 2
+                },
+                {
+                    "key": "region",
+                    "label": "Region",
+                    "type": "link",
+                    "order": 3,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "linkId": 9,
+                        "linkFieldDisplay": "name",
+                        "linkFieldDisplayDesc": null,
+                        "linkFieldDisplayType": "text",
+                        "linkFieldDisplayDescType": null,
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": true,
+                        "allowMultiple": false,
+                        "showTags": false
+                    },
+                    "id": 3
+                }
+            ],
+            "order": 0,
+            "hidden": false,
+            "nextRecordId": 19,
+            "filteringAllowed": true,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc"
+        },
+        {
+            "id": 5,
+            "key": "relationship",
+            "label": "Relationship",
+            "fields": [
+                {
+                    "key": "person",
+                    "label": "Person",
+                    "type": "link",
+                    "order": 1,
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "linkFieldDisplayDesc": null,
+                        "linkFieldDisplayDescType": null,
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": false,
+                        "allowMultiple": false,
+                        "showTags": false
+                    },
+                    "id": 4
+                },
+                {
+                    "key": "type",
+                    "label": "Type",
+                    "type": "link",
+                    "order": 2,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "linkId": 8,
+                        "linkFieldDisplay": "type",
+                        "linkFieldDisplayDesc": null,
+                        "linkFieldDisplayType": "text",
+                        "linkFieldDisplayDescType": null,
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": true,
+                        "allowMultiple": false,
+                        "showTags": false
+                    },
+                    "id": 5
+                },
+                {
+                    "key": "to-person",
+                    "label": "To Person",
+                    "type": "link",
+                    "order": 3,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "linkFieldDisplayDesc": null,
+                        "linkFieldDisplayType": "text",
+                        "linkFieldDisplayDescType": null,
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": true,
+                        "allowMultiple": true,
+                        "showTags": true
+                    },
+                    "id": 6
+                }
+            ],
+            "order": 0,
+            "hidden": true,
+            "nextRecordId": 159,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc"
+        },
+        {
+            "id": 6,
+            "key": "all-field-types",
+            "label": "🚰 All Field Types",
+            "fields": [
+                {
+                    "key": "text-single",
+                    "label": "Text: Single",
+                    "type": "text",
+                    "order": 1,
+                    "required": false,
+                    "params": {},
+                    "id": 1,
+                    "help": "Just a single line text input"
+                },
+                {
+                    "key": "text-multi",
+                    "label": "Text: Multi",
+                    "type": "text",
+                    "order": 2,
+                    "required": false,
+                    "params": {
+                        "type": "multi"
+                    },
+                    "id": 2,
+                    "hideInList": true,
+                    "help": "Multiline text input"
+                },
+                {
+                    "key": "text-markdown",
+                    "label": "Text: Markdown",
+                    "type": "text",
+                    "order": 3,
+                    "required": false,
+                    "params": {
+                        "type": "markdown",
+                        "required": true
+                    },
+                    "id": 3,
+                    "hideInList": true,
+                    "help": "Can be Markdown!"
+                },
+                {
+                    "key": "color-grays-rect-required",
+                    "label": "Color: Grays, Rect, Required",
+                    "type": "color",
+                    "order": 4,
+                    "required": false,
+                    "params": {
+                        "required": true,
+                        "onlyGray": true,
+                        "allowAlpha": true,
+                        "format": "hex",
+                        "displayAs": "rect"
+                    },
+                    "id": 4,
+                    "help": "Only grays"
+                },
+                {
+                    "key": "color-no-alpha-not-required-as-value",
+                    "label": "Color: No Alpha, Not Required, As Value",
+                    "type": "color",
+                    "order": 5,
+                    "required": false,
+                    "params": {
+                        "required": false,
+                        "onlyGray": false,
+                        "allowAlpha": false,
+                        "format": "hex",
+                        "displayAs": "value"
+                    },
+                    "id": 5,
+                    "hideInList": true,
+                    "help": "No alpha"
+                },
+                {
+                    "key": "date-required",
+                    "label": "Date: Required, Dislay as relative",
+                    "type": "date",
+                    "order": 6,
+                    "required": false,
+                    "params": {
+                        "required": true,
+                        "format": "YYYY-MM-DD",
+                        "fieldFormat": "Do MMM, YYYY",
+                        "fieldRelative": true
+                    },
+                    "id": 6,
+                    "hideInList": false,
+                    "help": "Date!"
+                },
+                {
+                    "key": "date-not-required-diff-format",
+                    "label": "Date: Not Required, diff format",
+                    "type": "date",
+                    "order": 7,
+                    "required": false,
+                    "params": {
+                        "required": false,
+                        "format": "YYYY-MM-DD",
+                        "fieldFormat": "YYYY-MM-DD"
+                    },
+                    "id": 7,
+                    "hideInList": true,
+                    "help": "Date in a different format"
+                },
+                {
+                    "key": "link-single-required",
+                    "label": "Link: Single, Required",
+                    "type": "link",
+                    "order": 8,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "required": true,
+                        "displayAs": "select",
+                        "allowEditChild": false,
+                        "allowMultiple": false
+                    },
+                    "id": 8,
+                    "help": "Choose a Person 👮‍♀️"
+                },
+                {
+                    "key": "link-single-not-required",
+                    "label": "Link: Single, Not required",
+                    "type": "link",
+                    "order": 9,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": false,
+                        "allowMultiple": false
+                    },
+                    "id": 9,
+                    "help": "Maybe choose a person, or not."
+                },
+                {
+                    "key": "link-multi-required",
+                    "label": "Link: Multi, Required",
+                    "type": "link",
+                    "order": 10,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "required": true,
+                        "displayAs": "select",
+                        "allowEditChild": false,
+                        "allowMultiple": true
+                    },
+                    "id": 10,
+                    "help": "Choose at least one person."
+                },
+                {
+                    "key": "link-multi-required-checkboxes",
+                    "label": "Link: Multi, Required, Checkboxes",
+                    "type": "link",
+                    "order": 11,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {
+                        "linkId": 3,
+                        "linkFieldDisplay": "name",
+                        "required": true,
+                        "displayAs": "check",
+                        "allowEditChild": false,
+                        "allowMultiple": true
+                    },
+                    "id": 11,
+                    "help": "And at least one person here"
+                },
+                {
+                    "key": "number-not-required",
+                    "label": "Number: float, not required",
+                    "type": "number",
+                    "order": 12,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {},
+                    "id": 12,
+                    "help": "A number like 1, 5, or 3.1415"
+                },
+                {
+                    "key": "number-int-required",
+                    "label": "Number: int, required",
+                    "type": "number",
+                    "order": 13,
+                    "required": false,
+                    "hideInList": true,
+                    "params": {
+                        "required": true,
+                        "type": "int"
+                    },
+                    "id": 13,
+                    "help": "A simple number. Like 1, 2 or 10000"
+                },
+                {
+                    "key": "sub-blueprint-required",
+                    "label": "Sub-Blueprint: required",
+                    "type": "sub",
+                    "order": 14,
+                    "required": false,
+                    "hideInList": false,
+                    "params": {
+                        "linkId": 7,
+                        "linkFieldId": "link",
+                        "linkFieldDisplay": [
+                            "name",
+                            "color",
+                            "id"
+                        ]
+                    },
+                    "id": 15,
+                    "help": "You can add a of things that belong only to this record!"
+                },
+                {
+                    "key": "file-required",
+                    "label": "File: Required",
+                    "type": "file",
+                    "order": 15,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "Single file",
+                    "params": {
+                        "required": true
+                    },
+                    "id": 16
+                },
+                {
+                    "key": "image-required",
+                    "label": "Image: Required",
+                    "type": "image",
+                    "order": 16,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "Single Image: Required",
+                    "params": {
+                        "required": true
+                    },
+                    "id": 17
+                },
+                {
+                    "key": "country",
+                    "label": "Country",
+                    "type": "country",
+                    "order": 17,
+                    "required": false,
+                    "hideInList": true,
+                    "help": "Countries from a list. Required. Multiple.",
+                    "params": {
+                        "required": true,
+                        "allowMultiple": true
+                    },
+                    "id": 18
+                },
+                {
+                    "key": "languages",
+                    "label": "Languages",
+                    "type": "language",
+                    "order": 18,
+                    "required": false,
+                    "hideInList": true,
+                    "help": "Languages from a list. Required. In native tongue.",
+                    "params": {
+                        "required": true,
+                        "allowMultiple": true,
+                        "native": true
+                    },
+                    "id": 19
+                },
+                {
+                    "key": "number-floating-point-min-max",
+                    "label": "Number: Floating point, Min, Max",
+                    "type": "number",
+                    "order": 19,
+                    "required": false,
+                    "hideInList": true,
+                    "help": "Required. Min 2.5. Max 3.5. Step 0.2.",
+                    "params": {
+                        "required": true,
+                        "type": "float",
+                        "displayAs": "text",
+                        "min": "-2.5",
+                        "max": "3.5",
+                        "step": "0.2"
+                    },
+                    "id": 20
+                },
+                {
+                    "key": "number-as-icons",
+                    "label": "Number: As Icons",
+                    "type": "number",
+                    "order": 20,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "Like a star rating!",
+                    "params": {
+                        "required": false,
+                        "type": "int",
+                        "displayAs": "icon",
+                        "min": "1",
+                        "max": "5",
+                        "step": "1",
+                        "iconOn": "fas fa-star",
+                        "iconOff": "far fa-star",
+                        "iconOnColor": "#FDD700",
+                        "iconOffColor": "#00000029"
+                    },
+                    "id": 21
+                },
+                {
+                    "key": "map",
+                    "label": "Map",
+                    "type": "map",
+                    "order": 21,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "Where things get down!",
+                    "params": {
+                        "required": true,
+                        "displayAddressSearch": true
+                    },
+                    "id": 22
+                },
+                {
+                    "key": "date-with-time",
+                    "label": "Date with Time",
+                    "type": "date",
+                    "order": 22,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "required": true,
+                        "withTime": true,
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "fieldFormat": "MMM Do, YYYY @ HH:mm",
+                        "fieldRelative": false
+                    },
+                    "id": 23
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 10,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc",
+            "secondary": true
+        },
+        {
+            "id": 7,
+            "key": "sub-test",
+            "label": "Sub Test",
+            "fields": [
+                {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "order": 1,
+                    "required": false,
+                    "hideInList": false,
+                    "params": {
+                        "type": "single",
+                        "required": true
+                    },
+                    "id": 1
+                },
+                {
+                    "key": "color",
+                    "label": "Color",
+                    "type": "color",
+                    "order": 2,
+                    "required": false,
+                    "hideInList": false,
+                    "params": {},
+                    "id": 2
+                },
+                {
+                    "key": "link",
+                    "label": "Link",
+                    "type": "link",
+                    "order": 3,
+                    "required": false,
+                    "hideInList": false,
+                    "params": {
+                        "linkId": 6,
+                        "linkFieldDisplay": "text-single",
+                        "required": false,
+                        "displayAs": "select",
+                        "allowEditChild": false,
+                        "allowMultiple": false
+                    },
+                    "id": 3
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 14,
+            "hidden": true
+        },
+        {
+            "id": 8,
+            "key": "relationship-type",
+            "label": "Relationship Type",
+            "fields": [
+                {
+                    "key": "type",
+                    "label": "Type",
+                    "type": "text",
+                    "order": 1,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {},
+                    "id": 1
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 12,
+            "hidden": true,
+            "secondary": false,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc"
+        },
+        {
+            "id": 9,
+            "key": "region",
+            "label": "🗺️ Region",
+            "fields": [
+                {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "order": 1,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {},
+                    "id": 1
+                },
+                {
+                    "key": "continent",
+                    "label": "Continent",
+                    "type": "link",
+                    "order": 2,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {
+                        "linkId": 10,
+                        "linkFieldDisplay": "name",
+                        "linkFieldDisplayDesc": null,
+                        "linkFieldDisplayType": "text",
+                        "linkFieldDisplayDescType": null,
+                        "required": false,
+                        "displayAs": "radio",
+                        "allowEditChild": true,
+                        "allowMultiple": false,
+                        "showTags": false
+                    },
+                    "id": 2
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 10,
+            "hidden": false,
+            "secondary": false,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc"
+        },
+        {
+            "id": 10,
+            "key": "continent",
+            "label": "Continent",
+            "fields": [
+                {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text",
+                    "order": 1,
+                    "required": false,
+                    "hideInList": false,
+                    "help": "",
+                    "params": {},
+                    "id": 1
+                }
+            ],
+            "order": 0,
+            "nextRecordId": 2,
+            "hidden": true,
+            "secondary": false,
+            "defaultSorting": null,
+            "defaultSortingOrder": "asc"
+        }
+    ],
+    "data": [
+        {
+            "schemaId": 3,
+            "data": [
+                {
+                    "name": "Jon Arryn",
+                    "id": 6,
+                    "house": 7,
+                    "born": "219",
+                    "year-died": "298"
+                },
+                {
+                    "name": "Petyr Baelish",
+                    "id": 7,
+                    "born": "268",
+                    "house": 18,
+                    "nickname": "Littlefinger"
+                },
+                {
+                    "name": "Lysa Tully",
+                    "house": 8,
+                    "id": 8,
+                    "born": "267",
+                    "year-died": "300"
+                },
+                {
+                    "name": "Robin Arryn",
+                    "house": 7,
+                    "id": 9,
+                    "nickname": "Sweetrobin",
+                    "born": "292"
+                },
+                {
+                    "name": "Walder Frey",
+                    "id": 10,
+                    "house": 15,
+                    "born": "208"
+                },
+                {
+                    "name": "Roslin Frey",
+                    "id": 11,
+                    "house": 15,
+                    "born": "282"
+                },
+                {
+                    "name": "Talisa",
+                    "id": 12
+                },
+                {
+                    "name": "Hoster Tully",
+                    "house": 8,
+                    "id": 13,
+                    "born": "239",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Edmure Tully",
+                    "house": 8,
+                    "id": 14,
+                    "born": "270"
+                },
+                {
+                    "name": "Catelyn Stark",
+                    "house": 8,
+                    "id": 15,
+                    "born": "264",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Robb Stark",
+                    "house": 9,
+                    "id": 16,
+                    "born": "283",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Sansa Stark",
+                    "house": 9,
+                    "id": 17,
+                    "born": "286"
+                },
+                {
+                    "name": "Roose Bolton",
+                    "house": 16,
+                    "id": 18,
+                    "born": "260"
+                },
+                {
+                    "name": "Ramsay Bolton",
+                    "house": 16,
+                    "id": 20,
+                    "born": "282"
+                },
+                {
+                    "name": "Arya",
+                    "house": 9,
+                    "id": 21,
+                    "born": "289"
+                },
+                {
+                    "name": "Rickard Stark",
+                    "house": 9,
+                    "id": 22,
+                    "born": "240",
+                    "year-died": "282"
+                },
+                {
+                    "name": "Eddard Stark",
+                    "house": 9,
+                    "id": 23,
+                    "nickname": "Ned",
+                    "born": "263",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Brandon Stark",
+                    "house": 9,
+                    "id": 24,
+                    "born": "262",
+                    "year-died": "282"
+                },
+                {
+                    "name": "Rickon Stark",
+                    "house": 9,
+                    "id": 25,
+                    "born": "295",
+                    "nickname": ""
+                },
+                {
+                    "name": "Benjen Stark",
+                    "house": 9,
+                    "id": 26,
+                    "nickname": "Ben",
+                    "born": "267"
+                },
+                {
+                    "name": "Balon Greyjoy",
+                    "house": 17,
+                    "id": 27,
+                    "born": "258",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Theon Greyjoy",
+                    "house": 17,
+                    "id": 28,
+                    "born": "279"
+                },
+                {
+                    "name": "Lyanna Stark",
+                    "house": 9,
+                    "id": 29,
+                    "born": "267",
+                    "year-died": "283"
+                },
+                {
+                    "name": "Jon Snow",
+                    "house": 10,
+                    "id": 30,
+                    "nickname": "Lord Snow",
+                    "born": "283"
+                },
+                {
+                    "name": "Maekar I Targaryen",
+                    "house": 10,
+                    "id": 32,
+                    "born": "176",
+                    "year-died": "233"
+                },
+                {
+                    "name": "Aemon Targaryen",
+                    "house": 10,
+                    "id": 33,
+                    "nickname": "Maester Aemon",
+                    "born": "198",
+                    "year-died": "300"
+                },
+                {
+                    "name": "Aegon V Targaryen",
+                    "house": 10,
+                    "id": 34,
+                    "nickname": "Egg, Aegon the Unlikely",
+                    "born": "200",
+                    "year-died": "259"
+                },
+                {
+                    "name": "Jaehaerys II Targaryen",
+                    "house": 10,
+                    "id": 35,
+                    "born": "255",
+                    "year-died": "262"
+                },
+                {
+                    "name": "Rhaelle Targaryen",
+                    "house": 10,
+                    "id": 36,
+                    "born": "231",
+                    "year-died": "246"
+                },
+                {
+                    "name": "Aerys II Targaryen",
+                    "house": 10,
+                    "id": 37,
+                    "nickname": "The Mad King, King Scab",
+                    "born": "244",
+                    "year-died": "283"
+                },
+                {
+                    "name": "Rhaegar Targaryen",
+                    "house": 10,
+                    "id": 38,
+                    "born": "259",
+                    "year-died": "283"
+                },
+                {
+                    "name": "Viserys Targaryen",
+                    "house": 10,
+                    "id": 39,
+                    "born": "276",
+                    "year-died": "298"
+                },
+                {
+                    "name": "Daenerys Targaryen",
+                    "house": 10,
+                    "id": 40,
+                    "nickname": "Daenerys Stormborn, Mother of Dragons",
+                    "born": "284"
+                },
+                {
+                    "name": "Ormund Baratheon",
+                    "house": 11,
+                    "id": 41,
+                    "born": "234",
+                    "year-died": "260"
+                },
+                {
+                    "name": "Steffon Baratheon",
+                    "house": 11,
+                    "id": 42,
+                    "born": "246",
+                    "year-died": "278"
+                },
+                {
+                    "name": "Robert I Baratheon",
+                    "house": 11,
+                    "id": 43,
+                    "born": "262",
+                    "year-died": "298"
+                },
+                {
+                    "name": "Stannis Baratheon",
+                    "house": 11,
+                    "id": 44,
+                    "born": "264"
+                },
+                {
+                    "name": "Renly Baratheon",
+                    "house": 11,
+                    "id": 45,
+                    "born": "277",
+                    "year-died": "299"
+                },
+                {
+                    "name": "Shireen Baratheon",
+                    "house": 11,
+                    "id": 46,
+                    "born": "298"
+                },
+                {
+                    "name": "Tywin Lannister",
+                    "house": 12,
+                    "id": 47,
+                    "nickname": "The great lion of the rock, The old lion",
+                    "born": "242",
+                    "year-died": "300"
+                },
+                {
+                    "name": "Joanna Lannister",
+                    "house": 12,
+                    "id": 48,
+                    "born": "248",
+                    "year-died": "273"
+                },
+                {
+                    "name": "Jaime Lannister",
+                    "house": 12,
+                    "id": 49,
+                    "born": "361",
+                    "year-died": "305",
+                    "nickname": "Kingslayer"
+                },
+                {
+                    "name": "Cersei Lannister",
+                    "house": 12,
+                    "id": 50,
+                    "born": "266"
+                },
+                {
+                    "name": "Tyrion Lannister",
+                    "house": 12,
+                    "id": 51,
+                    "nickname": "The Imp",
+                    "born": "273"
+                },
+                {
+                    "name": "Joffrey Baratheon",
+                    "house": 11,
+                    "id": 52,
+                    "nickname": "Joff",
+                    "born": "286",
+                    "year-died": "300"
+                },
+                {
+                    "name": "Myrcella Baratheon",
+                    "house": 11,
+                    "id": 53,
+                    "born": "290"
+                },
+                {
+                    "name": "Tommen Baratheon",
+                    "house": 11,
+                    "id": 54,
+                    "nickname": "The Boy King",
+                    "born": "291"
+                },
+                {
+                    "name": "Luthor Tyrell",
+                    "house": 13,
+                    "id": 55,
+                    "born": "237",
+                    "year-died": "271"
+                },
+                {
+                    "name": "Olenna Tyrell",
+                    "house": 13,
+                    "id": 56,
+                    "nickname": "Queen of Thorns",
+                    "born": "228"
+                },
+                {
+                    "name": "Mace Tyrell",
+                    "house": 13,
+                    "id": 57,
+                    "nickname": "Lord Oaf",
+                    "born": "260"
+                },
+                {
+                    "name": "Margaery Tyrell",
+                    "house": 13,
+                    "id": 58,
+                    "nickname": "Little rose",
+                    "born": "283"
+                },
+                {
+                    "name": "Loras Tyrell",
+                    "house": 13,
+                    "id": 59,
+                    "nickname": "The Knight of Flowers",
+                    "born": "282"
+                },
+                {
+                    "name": "Doran Martell",
+                    "house": 14,
+                    "id": 60,
+                    "born": "247"
+                },
+                {
+                    "name": "Oberyn Martell",
+                    "house": 14,
+                    "id": 61,
+                    "born": "257",
+                    "year-died": "300"
+                },
+                {
+                    "name": "Elia Martell",
+                    "house": 14,
+                    "id": 62,
+                    "nickname": "Elia of Dorne",
+                    "born": "256",
+                    "year-died": "283"
+                },
+                {
+                    "name": "Trystane Martell",
+                    "house": 14,
+                    "id": 63,
+                    "nickname": "Trys",
+                    "born": "287"
+                }
+            ]
+        },
+        {
+            "schemaId": 4,
+            "data": [
+                {
+                    "name": "House Arryn",
+                    "color": "#961EA9FF",
+                    "id": 7,
+                    "region": 1
+                },
+                {
+                    "name": "House Tully",
+                    "color": "#01529CFF",
+                    "id": 8,
+                    "region": 2
+                },
+                {
+                    "name": "House Stark",
+                    "color": "#E0D6BFFF",
+                    "id": 9,
+                    "region": 3
+                },
+                {
+                    "name": "House Targaryen",
+                    "color": "#000000FF",
+                    "id": 10
+                },
+                {
+                    "name": "House Baratheon",
+                    "color": "#FFE221FF",
+                    "id": 11,
+                    "region": 4
+                },
+                {
+                    "name": "House Lannister",
+                    "color": "#C10E0EFF",
+                    "id": 12,
+                    "region": 5
+                },
+                {
+                    "name": "House Tyrell",
+                    "color": "#CADCAEFF",
+                    "id": 13,
+                    "region": 6
+                },
+                {
+                    "name": "House Martell",
+                    "color": "#FFA400FF",
+                    "id": 14,
+                    "region": 7
+                },
+                {
+                    "name": "House Frey",
+                    "id": 15,
+                    "color": "#1F36EFFF",
+                    "region": 2
+                },
+                {
+                    "name": "House Bolton",
+                    "color": "#FF0000FF",
+                    "id": 16,
+                    "region": 3
+                },
+                {
+                    "name": "House Greyjoy",
+                    "id": 17,
+                    "color": "#FFE700FF",
+                    "region": 8
+                },
+                {
+                    "name": "House Baelish",
+                    "color": "#83D28FFF",
+                    "id": 18,
+                    "region": 1
+                }
+            ]
+        },
+        {
+            "schemaId": 5,
+            "data": [
+                {
+                    "person": 6,
+                    "type": 2,
+                    "to-person": 9,
+                    "id": 5
+                },
+                {
+                    "person": 6,
+                    "type": 4,
+                    "to-person": 8,
+                    "id": 6
+                },
+                {
+                    "person": 7,
+                    "type": 4,
+                    "to-person": 8,
+                    "id": 7
+                },
+                {
+                    "person": 8,
+                    "type": 4,
+                    "to-person": [
+                        7,
+                        6
+                    ],
+                    "id": 8
+                },
+                {
+                    "person": 8,
+                    "type": 3,
+                    "to-person": 9,
+                    "id": 10
+                },
+                {
+                    "person": 9,
+                    "type": 1,
+                    "to-person": [
+                        8,
+                        6
+                    ],
+                    "id": 11
+                },
+                {
+                    "person": 10,
+                    "type": 2,
+                    "to-person": 11,
+                    "id": 13
+                },
+                {
+                    "person": 11,
+                    "type": 1,
+                    "to-person": 10,
+                    "id": 14
+                },
+                {
+                    "person": 11,
+                    "type": 4,
+                    "to-person": 14,
+                    "id": 15
+                },
+                {
+                    "person": 12,
+                    "type": 4,
+                    "to-person": 16,
+                    "id": 16
+                },
+                {
+                    "person": 13,
+                    "type": 2,
+                    "to-person": [
+                        8,
+                        14,
+                        15
+                    ],
+                    "id": 17
+                },
+                {
+                    "person": 8,
+                    "type": 1,
+                    "to-person": 13,
+                    "id": 20
+                },
+                {
+                    "person": 14,
+                    "type": 1,
+                    "to-person": 13,
+                    "id": 23
+                },
+                {
+                    "person": 14,
+                    "type": 5,
+                    "to-person": [
+                        8,
+                        15
+                    ],
+                    "id": 24
+                },
+                {
+                    "person": 15,
+                    "type": 1,
+                    "to-person": 13,
+                    "id": 26
+                },
+                {
+                    "person": 15,
+                    "type": 5,
+                    "to-person": [
+                        14,
+                        8
+                    ],
+                    "id": 27
+                },
+                {
+                    "person": 15,
+                    "type": 4,
+                    "to-person": 23,
+                    "id": 29
+                },
+                {
+                    "person": 15,
+                    "type": 3,
+                    "to-person": [
+                        16,
+                        17,
+                        21,
+                        24,
+                        25
+                    ],
+                    "id": 30
+                },
+                {
+                    "person": 16,
+                    "type": 1,
+                    "to-person": [
+                        15,
+                        23
+                    ],
+                    "id": 35
+                },
+                {
+                    "person": 16,
+                    "type": 4,
+                    "to-person": 12,
+                    "id": 37
+                },
+                {
+                    "person": 16,
+                    "type": 5,
+                    "to-person": [
+                        17,
+                        21,
+                        24,
+                        25
+                    ],
+                    "id": 38
+                },
+                {
+                    "person": 17,
+                    "type": 1,
+                    "to-person": [
+                        15,
+                        23
+                    ],
+                    "id": 42
+                },
+                {
+                    "person": 17,
+                    "type": 4,
+                    "to-person": 20,
+                    "id": 44
+                },
+                {
+                    "person": 17,
+                    "type": 5,
+                    "to-person": [
+                        16,
+                        21,
+                        24,
+                        25
+                    ],
+                    "id": 45
+                },
+                {
+                    "person": 18,
+                    "type": 2,
+                    "to-person": 20,
+                    "id": 49
+                },
+                {
+                    "person": 20,
+                    "type": 1,
+                    "to-person": 18,
+                    "id": 50
+                },
+                {
+                    "person": 20,
+                    "type": 4,
+                    "to-person": 17,
+                    "id": 51
+                },
+                {
+                    "person": 21,
+                    "type": 1,
+                    "to-person": [
+                        23,
+                        15
+                    ],
+                    "id": 52
+                },
+                {
+                    "person": 8,
+                    "type": 5,
+                    "id": 53,
+                    "to-person": [
+                        14,
+                        15
+                    ]
+                },
+                {
+                    "person": 21,
+                    "type": 5,
+                    "to-person": [
+                        16,
+                        17,
+                        24,
+                        25
+                    ],
+                    "id": 54
+                },
+                {
+                    "person": 22,
+                    "type": 2,
+                    "to-person": [
+                        24,
+                        23,
+                        26,
+                        29
+                    ],
+                    "id": 55
+                },
+                {
+                    "person": 24,
+                    "type": 1,
+                    "to-person": [
+                        22
+                    ],
+                    "id": 56
+                },
+                {
+                    "person": 24,
+                    "type": 5,
+                    "to-person": [
+                        23,
+                        26,
+                        29
+                    ],
+                    "id": 57
+                },
+                {
+                    "person": 23,
+                    "type": 1,
+                    "to-person": [
+                        22
+                    ],
+                    "id": 58
+                },
+                {
+                    "person": 23,
+                    "type": 4,
+                    "to-person": [
+                        15
+                    ],
+                    "id": 59
+                },
+                {
+                    "person": 23,
+                    "type": 2,
+                    "to-person": [
+                        16,
+                        17,
+                        21,
+                        24,
+                        25
+                    ],
+                    "id": 60
+                },
+                {
+                    "person": 25,
+                    "type": 1,
+                    "to-person": [
+                        15,
+                        23
+                    ],
+                    "id": 61
+                },
+                {
+                    "person": 25,
+                    "type": 5,
+                    "to-person": [
+                        16,
+                        17,
+                        21,
+                        24,
+                        25
+                    ],
+                    "id": 62
+                },
+                {
+                    "person": 26,
+                    "type": 1,
+                    "to-person": [
+                        22
+                    ],
+                    "id": 63
+                },
+                {
+                    "person": 26,
+                    "type": 5,
+                    "to-person": [
+                        24,
+                        23,
+                        29
+                    ],
+                    "id": 64
+                },
+                {
+                    "person": 27,
+                    "type": 2,
+                    "to-person": [
+                        28
+                    ],
+                    "id": 65
+                },
+                {
+                    "person": 28,
+                    "type": 1,
+                    "to-person": [
+                        27
+                    ],
+                    "id": 66
+                },
+                {
+                    "person": 28,
+                    "type": 7,
+                    "to-person": [
+                        23,
+                        15
+                    ],
+                    "id": 67
+                },
+                {
+                    "person": 29,
+                    "type": 1,
+                    "to-person": [
+                        22
+                    ],
+                    "id": 68
+                },
+                {
+                    "person": 29,
+                    "type": 4,
+                    "to-person": [
+                        38
+                    ],
+                    "id": 69
+                },
+                {
+                    "person": 29,
+                    "type": 3,
+                    "to-person": [
+                        30
+                    ],
+                    "id": 70
+                },
+                {
+                    "person": 29,
+                    "type": 5,
+                    "to-person": [
+                        24,
+                        23,
+                        26
+                    ],
+                    "id": 71
+                },
+                {
+                    "person": 30,
+                    "type": 1,
+                    "to-person": [
+                        29,
+                        38
+                    ],
+                    "id": 72
+                },
+                {
+                    "person": 30,
+                    "type": 6,
+                    "to-person": [
+                        23
+                    ],
+                    "id": 73
+                },
+                {
+                    "person": 32,
+                    "type": 2,
+                    "to-person": [
+                        33,
+                        34
+                    ],
+                    "id": 74
+                },
+                {
+                    "person": 33,
+                    "type": 1,
+                    "to-person": [
+                        32
+                    ],
+                    "id": 75
+                },
+                {
+                    "person": 34,
+                    "type": 1,
+                    "to-person": [
+                        32
+                    ],
+                    "id": 76
+                },
+                {
+                    "person": 34,
+                    "type": 2,
+                    "to-person": [
+                        35,
+                        36
+                    ],
+                    "id": 77
+                },
+                {
+                    "person": 35,
+                    "type": 2,
+                    "to-person": [
+                        37
+                    ],
+                    "id": 78
+                },
+                {
+                    "person": 36,
+                    "type": 3,
+                    "to-person": [
+                        42
+                    ],
+                    "id": 79
+                },
+                {
+                    "person": 36,
+                    "type": 4,
+                    "to-person": [
+                        41
+                    ],
+                    "id": 80
+                },
+                {
+                    "person": 36,
+                    "type": 5,
+                    "to-person": [
+                        35
+                    ],
+                    "id": 81
+                },
+                {
+                    "person": 35,
+                    "type": 1,
+                    "to-person": [
+                        34
+                    ],
+                    "id": 82
+                },
+                {
+                    "person": 35,
+                    "type": 5,
+                    "to-person": [
+                        36
+                    ],
+                    "id": 83
+                },
+                {
+                    "person": 36,
+                    "type": 1,
+                    "to-person": [
+                        34
+                    ],
+                    "id": 84
+                },
+                {
+                    "person": 37,
+                    "type": 1,
+                    "to-person": [
+                        35
+                    ],
+                    "id": 85
+                },
+                {
+                    "person": 37,
+                    "type": 2,
+                    "to-person": [
+                        38,
+                        39,
+                        40
+                    ],
+                    "id": 86
+                },
+                {
+                    "person": 38,
+                    "type": 4,
+                    "to-person": [
+                        29
+                    ],
+                    "id": 87
+                },
+                {
+                    "person": 38,
+                    "type": 2,
+                    "to-person": [
+                        30
+                    ],
+                    "id": 88
+                },
+                {
+                    "person": 38,
+                    "type": 5,
+                    "to-person": [
+                        39,
+                        40
+                    ],
+                    "id": 89
+                },
+                {
+                    "person": 39,
+                    "type": 1,
+                    "to-person": [
+                        37,
+                        36
+                    ],
+                    "id": 90
+                },
+                {
+                    "person": 39,
+                    "type": 5,
+                    "to-person": [
+                        38,
+                        40
+                    ],
+                    "id": 91
+                },
+                {
+                    "person": 40,
+                    "type": 1,
+                    "to-person": [
+                        37
+                    ],
+                    "id": 92
+                },
+                {
+                    "person": 40,
+                    "type": 5,
+                    "to-person": [
+                        38,
+                        39
+                    ],
+                    "id": 93
+                },
+                {
+                    "person": 40,
+                    "type": 8,
+                    "to-person": [
+                        30
+                    ],
+                    "id": 94
+                },
+                {
+                    "person": 30,
+                    "type": 8,
+                    "to-person": [
+                        40
+                    ],
+                    "id": 95
+                },
+                {
+                    "person": 41,
+                    "type": 2,
+                    "to-person": [
+                        42
+                    ],
+                    "id": 96
+                },
+                {
+                    "person": 41,
+                    "type": 4,
+                    "to-person": [
+                        36
+                    ],
+                    "id": 97
+                },
+                {
+                    "person": 42,
+                    "type": 1,
+                    "to-person": [
+                        36,
+                        41
+                    ],
+                    "id": 98
+                },
+                {
+                    "person": 42,
+                    "type": 2,
+                    "to-person": [
+                        43,
+                        44,
+                        45
+                    ],
+                    "id": 99
+                },
+                {
+                    "person": 38,
+                    "type": 4,
+                    "to-person": [
+                        62
+                    ],
+                    "id": 100
+                },
+                {
+                    "person": 43,
+                    "type": 1,
+                    "to-person": [
+                        42
+                    ],
+                    "id": 101
+                },
+                {
+                    "person": 43,
+                    "type": 5,
+                    "to-person": [
+                        44,
+                        45
+                    ],
+                    "id": 102
+                },
+                {
+                    "person": 43,
+                    "type": 9,
+                    "to-person": [
+                        52,
+                        53,
+                        54
+                    ],
+                    "id": 103
+                },
+                {
+                    "person": 43,
+                    "type": 4,
+                    "to-person": [
+                        50
+                    ],
+                    "id": 104
+                },
+                {
+                    "person": 44,
+                    "type": 1,
+                    "to-person": [
+                        42
+                    ],
+                    "id": 105
+                },
+                {
+                    "person": 44,
+                    "to-person": [
+                        43,
+                        45
+                    ],
+                    "id": 106
+                },
+                {
+                    "person": 44,
+                    "type": 2,
+                    "to-person": [
+                        46
+                    ],
+                    "id": 107
+                },
+                {
+                    "person": 45,
+                    "type": 1,
+                    "to-person": [
+                        42
+                    ],
+                    "id": 108
+                },
+                {
+                    "person": 45,
+                    "type": 5,
+                    "to-person": [
+                        44,
+                        43
+                    ],
+                    "id": 109
+                },
+                {
+                    "person": 45,
+                    "type": 4,
+                    "to-person": [
+                        58
+                    ],
+                    "id": 110
+                },
+                {
+                    "person": 46,
+                    "type": 1,
+                    "to-person": [
+                        44
+                    ],
+                    "id": 111
+                },
+                {
+                    "person": 47,
+                    "type": 4,
+                    "to-person": [
+                        48
+                    ],
+                    "id": 112
+                },
+                {
+                    "person": 47,
+                    "type": 2,
+                    "to-person": [
+                        49,
+                        50,
+                        51
+                    ],
+                    "id": 113
+                },
+                {
+                    "person": 48,
+                    "type": 4,
+                    "to-person": [
+                        47
+                    ],
+                    "id": 114
+                },
+                {
+                    "person": 48,
+                    "type": 3,
+                    "to-person": [
+                        49,
+                        50,
+                        51
+                    ],
+                    "id": 115
+                },
+                {
+                    "person": 49,
+                    "type": 1,
+                    "to-person": [
+                        47,
+                        48
+                    ],
+                    "id": 116
+                },
+                {
+                    "person": 49,
+                    "type": 5,
+                    "to-person": [
+                        50,
+                        51
+                    ],
+                    "id": 117
+                },
+                {
+                    "person": 49,
+                    "type": 2,
+                    "to-person": [
+                        52,
+                        53,
+                        54
+                    ],
+                    "id": 118
+                },
+                {
+                    "person": 50,
+                    "type": 1,
+                    "to-person": [
+                        47,
+                        48
+                    ],
+                    "id": 119
+                },
+                {
+                    "person": 50,
+                    "type": 5,
+                    "to-person": [
+                        49,
+                        51
+                    ],
+                    "id": 120
+                },
+                {
+                    "person": 50,
+                    "type": 3,
+                    "to-person": [
+                        52,
+                        53,
+                        54
+                    ],
+                    "id": 121
+                },
+                {
+                    "person": 51,
+                    "type": 1,
+                    "to-person": [
+                        47,
+                        48
+                    ],
+                    "id": 123
+                },
+                {
+                    "person": 51,
+                    "type": 5,
+                    "to-person": [
+                        49,
+                        50
+                    ],
+                    "id": 124
+                },
+                {
+                    "person": 52,
+                    "type": 1,
+                    "to-person": [
+                        49,
+                        50
+                    ],
+                    "id": 125
+                },
+                {
+                    "person": 52,
+                    "type": 10,
+                    "to-person": [
+                        43
+                    ],
+                    "id": 126
+                },
+                {
+                    "person": 52,
+                    "type": 5,
+                    "to-person": [
+                        53,
+                        54
+                    ],
+                    "id": 127
+                },
+                {
+                    "person": 52,
+                    "type": 4,
+                    "to-person": [
+                        58
+                    ],
+                    "id": 128
+                },
+                {
+                    "person": 53,
+                    "type": 1,
+                    "to-person": [
+                        49,
+                        50
+                    ],
+                    "id": 129
+                },
+                {
+                    "person": 53,
+                    "type": 10,
+                    "to-person": [
+                        43
+                    ],
+                    "id": 130
+                },
+                {
+                    "person": 53,
+                    "type": 5,
+                    "to-person": [
+                        52,
+                        54
+                    ],
+                    "id": 131
+                },
+                {
+                    "person": 54,
+                    "type": 1,
+                    "to-person": [
+                        49,
+                        50
+                    ],
+                    "id": 132
+                },
+                {
+                    "person": 54,
+                    "type": 10,
+                    "to-person": [
+                        43
+                    ],
+                    "id": 133
+                },
+                {
+                    "person": 54,
+                    "type": 5,
+                    "to-person": [
+                        52,
+                        53
+                    ],
+                    "id": 134
+                },
+                {
+                    "person": 54,
+                    "type": 4,
+                    "to-person": [
+                        58
+                    ],
+                    "id": 135
+                },
+                {
+                    "person": 55,
+                    "type": 4,
+                    "to-person": [
+                        56
+                    ],
+                    "id": 136
+                },
+                {
+                    "person": 55,
+                    "type": 2,
+                    "to-person": [
+                        57
+                    ],
+                    "id": 137
+                },
+                {
+                    "person": 56,
+                    "type": 3,
+                    "to-person": [
+                        57
+                    ],
+                    "id": 138
+                },
+                {
+                    "person": 56,
+                    "type": 4,
+                    "to-person": [
+                        55
+                    ],
+                    "id": 139
+                },
+                {
+                    "person": 57,
+                    "type": 1,
+                    "to-person": [
+                        55,
+                        56
+                    ],
+                    "id": 140
+                },
+                {
+                    "person": 57,
+                    "type": 2,
+                    "to-person": [
+                        58,
+                        59
+                    ],
+                    "id": 141
+                },
+                {
+                    "person": 58,
+                    "type": 1,
+                    "to-person": [
+                        57
+                    ],
+                    "id": 142
+                },
+                {
+                    "person": 58,
+                    "type": 5,
+                    "to-person": [
+                        59
+                    ],
+                    "id": 143
+                },
+                {
+                    "person": 58,
+                    "type": 4,
+                    "to-person": [
+                        45,
+                        52,
+                        54
+                    ],
+                    "id": 144
+                },
+                {
+                    "person": 59,
+                    "type": 1,
+                    "to-person": [
+                        57
+                    ],
+                    "id": 145
+                },
+                {
+                    "person": 59,
+                    "type": 5,
+                    "to-person": [
+                        58
+                    ],
+                    "id": 146
+                },
+                {
+                    "person": 60,
+                    "type": 5,
+                    "to-person": [
+                        61,
+                        62
+                    ],
+                    "id": 147
+                },
+                {
+                    "person": 60,
+                    "type": 2,
+                    "to-person": [
+                        63
+                    ],
+                    "id": 148
+                },
+                {
+                    "person": 61,
+                    "type": 5,
+                    "to-person": [
+                        60,
+                        62
+                    ],
+                    "id": 149
+                },
+                {
+                    "person": 61,
+                    "type": 2,
+                    "to-person": [],
+                    "id": 150
+                },
+                {
+                    "person": 63,
+                    "type": 1,
+                    "to-person": [
+                        60
+                    ],
+                    "id": 151
+                },
+                {
+                    "person": 62,
+                    "type": 4,
+                    "to-person": [
+                        38
+                    ],
+                    "id": 152
+                },
+                {
+                    "person": 62,
+                    "type": 5,
+                    "to-person": [
+                        60,
+                        61
+                    ],
+                    "id": 153
+                }
+            ]
+        },
+        {
+            "schemaId": 6,
+            "data": [
+                {
+                    "text-single": "Some text",
+                    "text-multi": "Evet More ...\nWith new Lines ...",
+                    "text-markdown": "* Thing\n* Another",
+                    "color-grays-rect-required": "#A6A6A6FF",
+                    "date-required": "2020-08-29",
+                    "link-single-required": null,
+                    "link-multi-required": [],
+                    "link-multi-required-checkboxes": [],
+                    "number-int-required": "1",
+                    "file-required": {
+                        "id": 11,
+                        "mimeType": "image/jpeg",
+                        "name": "git-merge.jpg",
+                        "size": 310336,
+                        "cdnUrl": null,
+                        "thumbUrl": null,
+                        "width": 1374,
+                        "height": 1832
+                    },
+                    "image-required": {
+                        "id": 12,
+                        "mimeType": "image/svg+xml",
+                        "name": "Awesome_tiger.svg",
+                        "size": 86486,
+                        "cdnUrl": null,
+                        "thumbUrl": null,
+                        "width": 900,
+                        "height": 900
+                    },
+                    "country": [
+                        "AX",
+                        "AS"
+                    ],
+                    "languages": [
+                        "AA",
+                        "AF",
+                        "AB"
+                    ],
+                    "number-floating-point-min-max": "0.3",
+                    "number-as-icons": "3",
+                    "id": 9,
+                    "map": {
+                        "lat": 37.78156579999999,
+                        "long": -122.4059116
+                    },
+                    "date-with-time": "2020-07-10 02:04:00"
+                }
+            ]
+        },
+        {
+            "schemaId": 7,
+            "data": [
+                {
+                    "name": "Thing I like",
+                    "color": "#B92F2FFF",
+                    "link": 9,
+                    "id": 12
+                },
+                {
+                    "name": "Another thing I like",
+                    "color": "#FFDD00FF",
+                    "link": 9,
+                    "id": 13
+                }
+            ]
+        },
+        {
+            "schemaId": 8,
+            "data": [
+                {
+                    "type": "Child of",
+                    "id": 1
+                },
+                {
+                    "type": "Father of",
+                    "id": 2
+                },
+                {
+                    "type": "Mother of",
+                    "id": 3
+                },
+                {
+                    "type": "Married to",
+                    "id": 4
+                },
+                {
+                    "type": "Sibling of",
+                    "id": 5
+                },
+                {
+                    "type": "Raised by",
+                    "id": 6
+                },
+                {
+                    "type": "Ward of",
+                    "id": 7
+                },
+                {
+                    "type": "Slept with",
+                    "id": 8
+                },
+                {
+                    "type": "Legal father of",
+                    "id": 9
+                },
+                {
+                    "type": "Legal child of",
+                    "id": 10
+                },
+                {
+                    "type": "Bastard child of",
+                    "id": 11
+                }
+            ]
+        },
+        {
+            "schemaId": 9,
+            "data": [
+                {
+                    "name": "The Vale",
+                    "id": 1,
+                    "continent": 1
+                },
+                {
+                    "name": "The Riverlands",
+                    "id": 2,
+                    "continent": 1
+                },
+                {
+                    "name": "The North",
+                    "id": 3,
+                    "continent": 1
+                },
+                {
+                    "name": "Stormlands",
+                    "id": 4,
+                    "continent": 1
+                },
+                {
+                    "name": "Westerland",
+                    "id": 5,
+                    "continent": 1
+                },
+                {
+                    "name": "The Reach",
+                    "id": 6,
+                    "continent": 1
+                },
+                {
+                    "name": "Dorne",
+                    "id": 7,
+                    "continent": 1
+                },
+                {
+                    "name": "Iron Islands",
+                    "continent": 1,
+                    "id": 8
+                }
+            ]
+        },
+        {
+            "schemaId": 10,
+            "data": [
+                {
+                    "name": "Westeros",
+                    "id": 1
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "highlightColor": "#0479DAFF",
+        "highlightTextColor": "#FFFFFFFF",
+        "name": "GoT linked data",
+        "icon": "🏢",
+        "homeText": "# Example Dataset\n\n- A Game of Thrones example with lots of linked data.\n- *All Field Types* simply includes a table with every field type. Not useful.\n- Image / file uploads may not work properly as yet.",
+        "pallete": []
+    },
+    "files": []
+}
