@@ -10,6 +10,7 @@ const tabs = [
   { value: 'data', label: 'Data', icon: 'mdi:database-outline' },
   { value: 'sync', label: 'Sync', icon: 'mdi:cloud-outline' },
   { value: 'projects', label: 'Projects', icon: 'mdi:folder-multiple-outline' },
+  { value: 'interface', label: 'Interface', icon: 'mdi:tune-variant' },
 ]
 const selected = computed(() => route.path.split('/').pop() || 'project-settings')
 const heading = computed(() => tabs.find((t) => t.value === selected.value)?.label || '')

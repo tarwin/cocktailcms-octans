@@ -18,6 +18,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'data', name: 'SettingsData', component: () => import('./pages/settings/DataSettings.vue') },
       { path: 'sync', name: 'SettingsSync', component: () => import('./pages/settings/SyncSettings.vue') },
       { path: 'projects', name: 'SettingsProjects', component: () => import('./pages/settings/ProjectsSettings.vue') },
+      { path: 'interface', name: 'SettingsInterface', component: () => import('./pages/settings/InterfaceSettings.vue') },
     ],
   },
   { path: '/:pathMatch(.*)*', redirect: '/home' },

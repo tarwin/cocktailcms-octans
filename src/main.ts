@@ -6,6 +6,9 @@ import './styles.css'
 import App from './App.vue'
 import { router } from './router'
 import { boot } from './store'
+import { initSheetSpeed } from './core/sheetSpeed'
+
+initSheetSpeed()
 
 const app = createApp(App)
 app.use(UI)

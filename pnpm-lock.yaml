@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@octans/ui':
-        specifier: ^1.8.1
-        version: 1.8.1(vue-router@5.3.1(@vue/compiler-sfc@3.5.43)(rolldown@1.2.9)(vite@8.3.0(@types/node@26.6.2))(vue@3.5.43(typescript@5.9.3)))(vue@3.5.43(typescript@5.9.3))
+        specifier: ^1.14.0
+        version: 1.14.0(vue-router@5.3.1(@vue/compiler-sfc@3.5.43)(rolldown@1.2.9)(vite@8.3.0(@types/node@26.6.2))(vue@3.5.43(typescript@5.9.3)))(vue@3.5.43(typescript@5.9.3))
       '@sqlite.org/sqlite-wasm':
         specifier: ^3.53.4-build1
         version: 3.53.4-build1
@@ -104,8 +104,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@octans/ui@1.8.1':
-    resolution: {integrity: sha512-A7JwG32The68jsBWAFoH90epedSI/UcPROe9eUQI7o9Fup0h6Hnxx0nRT7j3qwQ0D47ddKysiCRYQ8RkHyZhAA==}
+  '@octans/ui@1.14.0':
+    resolution: {integrity: sha512-J+XB3mProbgG4HvTImfSOtp5khlkpCTVZkGS+6a5bj3I/N75fe+UDEtFbaZIdiB7s7aryf4cqBjIlhA3xuqtiA==}
     engines: {node: '>=24'}
     hasBin: true
     peerDependencies:
@@ -773,7 +773,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@octans/ui@1.8.1(vue-router@5.3.1(@vue/compiler-sfc@3.5.43)(rolldown@1.2.9)(vite@8.3.0(@types/node@26.6.2))(vue@3.5.43(typescript@5.9.3)))(vue@3.5.43(typescript@5.9.3))':
+  '@octans/ui@1.14.0(vue-router@5.3.1(@vue/compiler-sfc@3.5.43)(rolldown@1.2.9)(vite@8.3.0(@types/node@26.6.2))(vue@3.5.43(typescript@5.9.3)))(vue@3.5.43(typescript@5.9.3))':
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@iconify/vue': 5.0.2(vue@3.5.43(typescript@5.9.3))

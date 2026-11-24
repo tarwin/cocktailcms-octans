@@ -10,7 +10,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@octans/ui": "^1.8.1",
+    "@octans/ui": "^1.14.0",
     "@sqlite.org/sqlite-wasm": "^3.53.4-build1",
     "dayjs": "^1.11.23",
     "marked": "^18.0.13",

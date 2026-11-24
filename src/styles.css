@@ -55,3 +55,35 @@
 .sMonospace textarea {
   font-family: var(--octans-font-mono, 'Courier New', monospace);
 }
+
+/* Higher-contrast SegmentedControl: selected segment takes the primary colour,
+   unselected labels use full text colour instead of subdued. Uses the
+   component's own override variables, so dark mode still follows the tokens. */
+:root {
+  --SegmentedControl-trackColor: color-mix(in oklab, var(--octans-text) 9%, var(--octans-surface));
+  --SegmentedControl-textColor: var(--octans-text);
+  --SegmentedControl-selectedColor: var(--octans-primary);
+  --SegmentedControl-selectedBorderColor: var(--octans-primary);
+  --SegmentedControl-selectedTextColor: var(--octans-text-on-primary);
+}
+/* The component reuses selectedTextColor for hovering unselected segments,
+   which would be text-on-primary over a light hover surface. */
+[class*='_SegmentedControl_'] [class*='_segment_']:hover:not([class*='_selected_']) {
+  color: var(--octans-text);
+}
+/* Give the track an edge so it reads as a control on a white card. */
+[class*='_SegmentedControl_']:not([class*='_error_']) {
+  box-shadow: inset 0 0 0 1px var(--octans-border);
+}
+/* More breathing room around the selected segment: 4px track padding instead
+   of 2px, segments 4px shorter so the control keeps its overall height. */
+[class*='_SegmentedControl_'] {
+  padding: 4px;
+  border-radius: calc(var(--octans-radius-field) + 4px);
+}
+[class*='_SegmentedControl_'] [class*='_segment_'] {
+  border-radius: var(--octans-radius-field);
+}
+[class*='_SegmentedControl_']:not([class*='_size']) [class*='_segment_'] {
+  min-height: 28px;
+}
